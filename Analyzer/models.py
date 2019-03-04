@@ -20,7 +20,7 @@ class general_expenses(models.Model):
     Email=models.ForeignKey(user_profile,  on_delete=models.CASCADE,)
     amount=models.IntegerField()
     categories=(
-    (1,'Food9'),
+    (1,'Food'),
     (2,'Travel'),
     (3,'Groceries'),
     (4, 'Electronics'),
@@ -30,16 +30,17 @@ class general_expenses(models.Model):
     )
     category=models.IntegerField(choices=categories)
     remarks=models.CharField(max_length=264)
+    date_spent=models.DateField()
 
     def __str__(self):
-        return self.name
+        return self.remarks
 
 class mandatory_expenses(models.Model):
     T_id=models.IntegerField(primary_key=True)
     Email=models.ForeignKey(user_profile, on_delete=models.CASCADE,)
     amount=models.IntegerField()
     categories=(
-    (1,'Food9'),
+    (1,'Food'),
     (2,'Travel'),
     (3,'Groceries'),
     (4, 'Electronics'),

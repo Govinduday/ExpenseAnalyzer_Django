@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Analyzer',
+
     #'mysqlclient' # use this "pip install --only-binary :all: mysqlclient"
 ]
 
@@ -81,7 +82,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'Expense_Analyzer',
         'USER' : 'root',
-        'PASSWORD' : '',
+        'PASSWORD' : 'UK1@3$5',
         'HOST' : 'localhost',
         'PORT' : '3306',
     }
